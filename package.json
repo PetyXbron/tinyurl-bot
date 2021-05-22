@@ -1,6 +1,6 @@
 {
-  "name": "discord-tinyurl-bot",
-  "version": "1.0.0",
+  "name": "tinyurl-bot",
+  "version": "1.0.1",
   "description": "Javascript discord bot, with you can shorten your long links to http://tinyurl.com/",
   "main": "index.js",
   "scripts": {

@@ -34,7 +34,7 @@ bot.on("message", async message => {
         if(!alias) {
           TinyURL.shorten(link,
             function(res, err) {
-              if (err | res === 'Error') {
+              if (err || res === 'Error') {
                 if (err) console.log(err);
                 const embedError = new Discord.MessageEmbed().setColor('#be1931').setDescription("⛔ " + `**[Your link](${link}) could not be shortened!**`)
                 return message.channel.send(embedError);
@@ -48,7 +48,7 @@ bot.on("message", async message => {
           const informace = { 'url': link, 'alias': alias }
           TinyURL.shortenWithAlias(informace,
             function(res, err) {
-                if (err | res === 'Error') {
+                if (err || res === 'Error') {
                   if (err) console.log(err);
                   const embedError = new Discord.MessageEmbed().setColor('#be1931').setDescription("⛔ " + `**[Your link](${link}) could not be shortened!**`)
                   return message.channel.send(embedError);
